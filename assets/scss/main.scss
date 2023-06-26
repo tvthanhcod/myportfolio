@@ -1,0 +1,187 @@
+@import 'mixins', 'variables', 'colors', 'base.scss';
+
+// header 
+.header {
+    // background-color: $white-color;
+    width: 100%;
+    height: 75px;
+    // box-shadow: 0 .8px 10px rgba(0, 0, 0, .1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    .header__content {
+        width: 100%;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+
+        .header__content-logo {
+            font-size: 24px;
+            // width: 120px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & span {
+                background-color: $primary-color;
+                display: flex;
+                width: 40px;
+                height: 40px;
+                color: $white-color;
+                border-radius: 50%;
+                font-weight: 700;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & h3 {
+                color: $black-color;
+            }
+        }
+
+        .header__content-nav {
+            flex: 1;
+            height: 100%;
+            list-style: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            & li {
+                margin: 0 30px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover .header__content-nav-link:before {
+                    transform: scale(1);
+                }
+            }
+
+            .header__content-nav-link {
+                display: inline-block;
+                text-decoration: none;
+                color: $black-color;
+                font-weight: 500;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $primary-color;
+                    transition: all .4s;
+                    transform-origin: center center;
+                    transform: scale(0);
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+// hero
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+
+    .hero__left {
+        height: 100vh;
+        background-color: $hero-background-color;
+        position: relative;
+
+        .hand-down-icon {
+            position: absolute;
+            font-size: 16px;
+            color: $primary-color;
+            top: 70%;
+            right: 0;
+            animation: toTop 1s ease-in-out infinite;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 70px;
+            height: 70px;
+            background-color: $hero-background-color;
+            top: 70%;
+            right: -30px;
+            transform: rotate(45deg);
+
+        }
+    }
+
+    .hero-right {
+        height: 100vh;
+        background-color: $white-color;
+    }
+
+    .hero__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        .subheading {
+            font-size: 16px;
+            color: $primary-color;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        & h1 {
+            font-size: 60px;
+        }
+
+        & h2 {
+            font-size: 32px;
+            color: $primary-color;
+
+            span.text__typing {
+                color: $black-color !important;
+            }
+        }
+    }
+}
+
+@keyframes typing {
+    to {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+@keyframes slide {
+    to {
+        top: -100px;
+    }
+}
+
+@keyframes toTop {
+    from {
+        top: 70%;
+        opacity: 60%;
+    }
+
+    to {
+        top: 80%;
+        opacity: 100%;
+    }
+}

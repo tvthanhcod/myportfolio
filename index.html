@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tvthanhcod - portfolio</title>
+    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="./assets/packages/fontawesome-free-6.4.0-web/css/all.min.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__content-logo">
+                    <span>p</span>
+                    <h3>ortfolio</h3>
+                </div>
+                <ul class="header__content-nav">
+                    <li><a href="#" class="header__content-nav-link">Home</a></li>
+                    <li><a href="#" class="header__content-nav-link">About</a></li>
+                    <li><a href="#" class="header__content-nav-link">Resume</a></li>
+                    <li><a href="#" class="header__content-nav-link">Project</a></li>
+                    <li><a href="#" class="header__content-nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero__left">
+            <div class="hand-down-icon">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </div>
+        <div class="hero__right"></div>
+        <div class="hero__content">
+            <span class="subheading">hey! i am</span>
+            <h1>Tvthanhcod</h1>
+            <h2>
+                I'm a
+                <span class="text__typing"></span>
+            </h2>
+        </div>
+    </section>
+    <section class="about-me"></section>
+    <section class="personal-information"></section>
+    <section class="project"></section>
+    <section class="hire-me"></section>
+    <footer class="footer"></footer>
+
+    <script src="./assets/packages/jquery370.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        const typed = new Typed('.text__typing', {
+            strings: ['Manunited Fan.', 'Frontend Developer.'],
+            typeSpeed: 80,
+            backSpeed: 80,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
