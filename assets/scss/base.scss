@@ -34,6 +34,7 @@
 }
 
 @import 'variables';
+@import './colors';
 
 * {
     margin: 0;
@@ -42,9 +43,10 @@
 }
 
 body {
+    position: relative;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 html {
@@ -56,4 +58,37 @@ html {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+}
+
+.header.headerFixed {
+    box-shadow: 0 .8px 10px rgba(0, 0, 0, .1);
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: $white-color;
+    animation: fadeInHeader .4s ease-in-out;
+}
+
+.header__content-nav li.active .header__content-nav-link:before {
+    transform: scale(1) !important;
+}
+
+@keyframes fadeInHeader {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+// personal infomation 
+.active-tag {
+    transform: translateX(0) !important;
+
+    & .tag__content {
+        color: $primary-color;
+    }
 }

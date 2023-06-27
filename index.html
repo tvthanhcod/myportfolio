@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./public/style.css">
     <link rel="stylesheet" href="./assets/packages/fontawesome-free-6.4.0-web/css/all.min.css">
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="./assets/packages/jquery370.js"></script>
 </head>
 
 <body>
@@ -19,22 +20,22 @@
                     <h3>ortfolio</h3>
                 </div>
                 <ul class="header__content-nav">
-                    <li><a href="#" class="header__content-nav-link">Home</a></li>
-                    <li><a href="#" class="header__content-nav-link">About</a></li>
-                    <li><a href="#" class="header__content-nav-link">Resume</a></li>
-                    <li><a href="#" class="header__content-nav-link">Project</a></li>
-                    <li><a href="#" class="header__content-nav-link">Contact</a></li>
+                    <li class="active"><span class="header__content-nav-link">Home</span></li>
+                    <li><span class="header__content-nav-link">About</span></li>
+                    <li><span class="header__content-nav-link">Resume</span></li>
+                    <li><span class="header__content-nav-link">Project</span></li>
+                    <li><span class="header__content-nav-link">Contact</span></li>
                 </ul>
             </div>
         </div>
     </header>
-    <section class="hero">
-        <div class="hero__left">
+    <section class="hero part-1">
+        <aside class="hero__left">
             <div class="hand-down-icon">
                 <i class="fas fa-arrow-down"></i>
             </div>
-        </div>
-        <div class="hero__right"></div>
+        </aside>
+        <aside class="hero__right"></aside>
         <div class="hero__content">
             <span class="subheading">hey! i am</span>
             <h1>Tvthanhcod</h1>
@@ -44,13 +45,125 @@
             </h2>
         </div>
     </section>
-    <section class="about-me"></section>
-    <section class="personal-information"></section>
-    <section class="project"></section>
-    <section class="hire-me"></section>
+    <section class="about-me part-2">
+        <div class="container">
+            <div class="about-me__content">
+                <aside class="about-me__left">
+                    <div class="about-me__personal-img">
+                        <img src="https://nguoinoitieng.net/wp-content/uploads/2023/03/tieu-su-Shou-Zi-Chew-2.jpeg"
+                            alt="">
+                    </div>
+                </aside>
+                <aside class="about-me__right">
+                    <h1 class="title">About me</h1>
+                    <span class="subTitle">A small river named Duden flows by their place
+                        and supplies it with the necessary regelialia.
+                    </span>
+                    <ul class="info__detail">
+                        <li>
+                            <span class="info__detail-field">Name:</span>
+                            <p class="info__detail-text">Triệu Văn Thành</p>
+                        </li>
+                        <li>
+                            <span class="info__detail-field">Date of birth:</span>
+                            <p class="info__detail-text">December 06, 2002</p>
+                        </li>
+                        <li>
+                            <span class="info__detail-field">Address:</span>
+                            <p class="info__detail-text">Hà Nội</p>
+                        </li>
+                        <li>
+                            <span class="info__detail-field">Zip code:</span>
+                            <p class="info__detail-text">1000</p>
+                        </li>
+                        <li>
+                            <span class="info__detail-field">Phone:</span>
+                            <p class="info__detail-text">+84342574750</p>
+                        </li>
+                        <li>
+                            <span class="info__detail-field">Email:</span>
+                            <p class="info__detail-text">tvthanhcod@gmail.com</p>
+                        </li>
+                    </ul>
+                    <button class="down-cv">download cv</button>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section class="personal-information part-3">
+        <div class="container">
+            <div class="personal-information__content">
+                <aside class="personal-information__left-side">
+                    <ul class="personal-information__left-side-taglist">
+                        <li>
+                            <p>
+                                <span class="tag__select-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                <span class="tag__content">Education</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="tag__select-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                <span class="tag__content">Skills</span>
+                            </p>
+                        </li>
+                    </ul>
+                </aside>
+                <aside class="personal-information__right-side">
+                    <article class="personal-information__right-side-part education page-1">
+                        <h2 class="personal-information__right-side-part-title">Education</h2>
+                        <ul class="personal-information__right-side-part-list">
+                            <li>
+                                <span>
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </span>
+                                <div>
+                                    <span class="date">2020-2024</span>
+                                    <h2 class="major">Information Technology</h2>
+                                    <span class="position">Hanoi Open University</span>
+                                    <p class="detail">
+                                        A small river named Duden flows by their place and supplies it with the
+                                        necessary regelialia. It is a paradisematic
+                                        country, in which roasted parts of sentences fly into your mouth.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="personal-information__right-side-part skills page-2">
+                        <h2 class="personal-information__right-side-part-title">Skills</h2>
+                        <ul class="personal-information__right-side-part-list">
+                            <li>
+                                <span>
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </span>
+                                <span>HTML, CSS, Javascript, Typescript, Reactjs, Nextjs</span>
+                            </li>
+                            <li>
+                                <span>
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </span>
+                                <span>Jquery, Ajax, SCSS, Tailwindcss, Redux, Threejs</span>
+                            </li>
+                        </ul>
+                    </article>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section class="project part-4">
+        <div class="container">
+            <h1 class="project__heading">My Projects</h1>
+            <span class="project__title">Far far away, behind the word mountains, far from the countries Vokalia and
+                Consonantia</span>
+            <div class="project__content">
+
+            </div>
+        </div>
+    </section>
+    <section class="hire-me part-5"></section>
     <footer class="footer"></footer>
 
-    <script src="./assets/packages/jquery370.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
         const typed = new Typed('.text__typing', {
