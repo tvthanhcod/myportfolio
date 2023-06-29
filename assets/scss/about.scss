@@ -1,0 +1,182 @@
+.about-me {
+    width: 100%;
+    height: 100vh;
+
+    .about-me__content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .about-me__left {
+            height: 100vh;
+            // background-color: $primary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .about-me__personal-img {
+                width: 350px;
+                height: 350px;
+                border: 5px outset rgba(0, 0, 0, .3);
+                border-style: inset;
+                animation: radius 6s infinite;
+                overflow: hidden;
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .about-me__right {
+            height: 100vh;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 50px 0;
+
+            .title {
+                font-size: 50px;
+            }
+
+            .subTitle {
+                color: $text-color;
+            }
+
+            & ul {
+                list-style: none;
+
+                & li {
+
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .info__detail-field {
+                        color: $black-color;
+                        font-weight: 600;
+                        min-width: 150px;
+                    }
+
+                    .info__detail-text {
+                        color: $text-color;
+                    }
+                }
+            }
+
+            .down-cv {
+                width: 147px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                border-radius: 40px;
+                color: $white-color;
+                outline: none;
+                background-color: $primary-color;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 600;
+                transition: all .5s;
+
+                &:hover {
+                    color: $black-color;
+                    box-shadow: 0 0 3px 4px $primary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@keyframes radius {
+    0% {
+        border-radius: 30% 70% 40% 60%;
+    }
+
+    50% {
+        border-radius: 50% 40% 80% 50%;
+    }
+
+    75% {
+        border-radius: 65% 70% 50% 30%;
+    }
+
+    100% {
+        border-radius: 30% 70% 40% 60%;
+    }
+}
+
+@media screen and (max-width : 768px) and (min-width: 601px) {
+    .about-me {
+        height: auto;
+        margin: 50px 0;
+
+        .about-me__content {
+            grid-template-columns: 1fr;
+
+            .about-me__left {
+                width: 100%;
+                height: auto;
+            }
+
+            .about-me__right {
+                width: 100%;
+                height: auto;
+                align-items: center;
+
+                .subTitle {
+                    text-align: center;
+                    margin: 20px 0 30px 0;
+                }
+
+                .down-cv {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .about-me {
+        height: auto;
+        margin: 50px 0;
+
+        .about-me__content {
+            grid-template-columns: 1fr;
+
+            .about-me__left {
+                width: 100%;
+                height: auto;
+            }
+
+            .about-me__right {
+                width: 100%;
+                height: auto;
+                align-items: center;
+
+                .subTitle {
+                    text-align: center;
+                    margin: 20px 0 30px 0;
+                }
+
+                .down-cv {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
