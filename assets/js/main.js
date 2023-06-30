@@ -37,7 +37,7 @@ $(function () {
 
     // hàm scroll
     function handleScroll(el) {
-        $('html').animate({ scrollTop: el.offset().top }, 600)
+        $('html').animate({ scrollTop: el.offset().top }, 1000, "easeOutExpo")
     }
 
     // hàm tự động active nav theo nội dung scroll

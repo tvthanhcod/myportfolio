@@ -741,6 +741,9 @@ html {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .project .project__title {
+    width: 100%;
+  }
 }
 .contact {
   width: 100%;
@@ -911,6 +914,11 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .contact .contact__form .contact__form-right .input-box {
+    width: 100%;
+    height: 52px;
+    margin-bottom: 30px;
   }
 }
 .footer {
